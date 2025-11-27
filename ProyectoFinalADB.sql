@@ -1,6 +1,14 @@
 ﻿/* ==========================================================================
-   PROYECTO DE CÁTEDRA - GYMDB
+   GESTIÓN DE RESERVAS DE UN GIMNASIO - - GYMDB
+   PROYECTO DE CÁTEDRA 
    Estructura Completa, Optimizada y con Esquemas
+   ==========================================================================
+   Integrantes:
+	- ANDREA PAMELA ALVAREZ LOPEZ - 00073824
+	- WILBER STANLEY CALDERON SANCHEZ - 00042623
+	- CESAR ALEJANDRO CHIQUILLO VIDES - 00225424
+	- JULIO ALEJANDRO FLORES DIAZ - 00018824
+	- RENE ALEJANDRO TREJO MORALES - 00360524
    ========================================================================== */
 
 -- 1. CREACIÓN DE LA BASE DE DATOS
@@ -174,6 +182,7 @@ SELECT * FROM Membresia.Socio
 
 -- Socios
 INSERT INTO Membresia.Socio (Nombres, Apellidos, FechaNacimiento, Telefono, Email, TipoMembresia, Estado) VALUES
+('Miguel', 'Francisco', '2000-01-09', '7045-9987', 'F_miguel@example.com', 'Premium', 'Inactivo'),
 ('Carlos', 'Hernandez', '1998-04-12', '7890-1111', 'carlos.h@example.com', 'Premium', 'Activo'),
 ('Ana', 'Martinez', '2000-02-01', '7777-2222', 'ana.m@example.com', 'Estandar', 'Activo'),
 ('Luis', 'Gomez', '1995-11-30', '7444-3333', 'luis.g@example.com', 'Premium', 'Activo'),
@@ -210,6 +219,33 @@ INSERT INTO Membresia.Reserva (SocioID, HorarioID, FechaReserva, Estado) VALUES
 (1, 1, GETDATE(), 'Activa'),
 (2, 2, GETDATE(), 'Activa'),
 (3, 3, GETDATE(), 'Activa');
+
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (3, 1, '2025-10-21 05:57:42', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (1, 3, '2025-05-13 13:11:35', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (2, 2, '2025-04-09 12:29:03', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (10, 2, '2025-03-24 13:54:25', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (5, 3, '2025-07-09 06:45:03', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (7, 1, '2025-02-21 05:17:32', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (1, 1, '2025-09-27 21:26:21', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (6, 1, '2025-08-15 04:06:45', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (1, 3, '2025-04-15 23:13:01', 'Inactiva');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (1, 1, '2025-11-19 08:25:18', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (5, 1, '2025-11-02 11:56:38', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (2, 1, '2025-11-10 06:14:40', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (7, 1, '2025-11-15 11:04:06', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (4, 2, '2025-11-01 18:08:04', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (4, 3, '2025-11-05 15:29:46', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (9, 2, '2025-11-09 16:45:53', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (9, 1, '2025-11-20 23:52:25', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (10, 1, '2025-11-15 01:33:02', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (8, 1, '2025-11-15 19:20:42', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (10, 3, '2025-08-15 05:23:57', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (10, 2, '2025-08-19 12:02:23', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (6, 3, '2025-08-27 17:19:49', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (10, 2, '2025-01-30 22:44:46', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (8, 1, '2025-02-14 19:53:46', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (1, 2, '2025-02-10 09:05:32', 'Activa');
+insert into Membresia.Reserva (SocioID, HorarioID, FechaReserva , Estado) values (1, 2, '2025-02-13 13:49:07', 'Activa');
 
 -- Productos
 INSERT INTO Ventas.Producto (Nombre, Precio, Stock, Categoria) VALUES
@@ -2636,3 +2672,5 @@ GO
 SELECT * FROM Ventas.vw_RankingSociosPagos;
 GO
 
+
+--
